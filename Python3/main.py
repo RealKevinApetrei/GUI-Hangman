@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import font
 from random import choice
-import time
 from pandas import read_csv
 
 import config
