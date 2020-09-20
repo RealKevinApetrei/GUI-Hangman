@@ -1,8 +1,6 @@
 import tkinter as tk
 from tkinter import font
 from random import choice
-from pandas import read_csv
-import csv
 
 import config
 
