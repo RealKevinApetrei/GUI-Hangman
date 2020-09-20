@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import font
 from random import choice
 from pandas import read_csv
+import csv
 
 import config
 
@@ -246,11 +247,17 @@ class Game(Application): # Main Game
             self.finish(1) # Wrap Up (Win)
 
     def finish(self, state): # Win/Loss Result/Outcome
-        df = read_csv("./Other/data.csv") # CSV File
+        gamesPlayed_file = open("./Other/Data/gamesplayed.txt", "r+")
+        currentStreak_file = open("./Other/Data/currentstreak.txt", "r+")
+        highestStreak_file = open("./Other/Data/higheststreak.txt", "r+")
 
-        previous_gamesplayed = int(df["GamesPlayed"][0]) # Previous GamesPlayed
-        previous_currentstreak = int(df["CurrentStreak"][0]) # Previous CurrentStreak
-        previous_higheststreak = int(df["HighestStreak"][0]) # Previous HighestStreak
+        previous_gamesplayed = int(gamesPlayed_file.read()) # Previous GamesPlayed
+        previous_currentstreak = int(currentStreak_file.read()) # Previous CurrentStreak
+        previous_higheststreak = int(highestStreak_file.read()) # Previous HighestStreak
+
+        gamesPlayed_file.seek(0)
+        currentStreak_file.seek(0)
+        highestStreak_file.seek(0)
 
         self.new_gamesplayed = previous_gamesplayed + 1 # New GamesPlayed Value
 
@@ -269,11 +276,13 @@ class Game(Application): # Main Game
             self.new_higheststreak = previous_higheststreak # New HighestStreak Value
             self.newhighstreak = 0 # New High Streak (No)
 
-        df.loc[0, "GamesPlayed"] = self.new_gamesplayed # Set new GamesPlayed
-        df.loc[0, "CurrentStreak"] = self.new_currentstreak # Set new CurrentStreak
-        df.loc[0, "HighestStreak"] = self.new_higheststreak # Set new HighestStreak
+        gamesPlayed_file.write(str(self.new_gamesplayed)) # Set new GamesPlayed
+        currentStreak_file.write(str(self.new_currentstreak)) # Set new CurrentStreak
+        highestStreak_file.write(str(self.new_higheststreak)) # Set new HighestStreak
 
-        df.to_csv("./Other/data.csv", index=False) # Save to CSV
+        gamesPlayed_file.close() # Close File
+        currentStreak_file.close() # Close File
+        highestStreak_file.close() # Close File
 
         self.after(3000, self.to_endmessage, state) # Wait 3 seconds...
 
@@ -304,11 +313,17 @@ class MainMenu(Application): # Main Menu
         super().__init__() # Superclass (Application)
 
         # Data Setup
-        df = read_csv("./Other/data.csv") # CSV File
+        gamesPlayed_file = open("./Other/Data/gamesplayed.txt", "r")
+        currentStreak_file = open("./Other/Data/currentstreak.txt", "r")
+        highestStreak_file = open("./Other/Data/higheststreak.txt", "r")
 
-        self.gamesplayed = df["GamesPlayed"][0] # GamesPlayed
-        self.currentstreak = df["CurrentStreak"][0] # CurrentStreak
-        self.higheststreak = df["HighestStreak"][0] # HighestStreak
+        self.gamesplayed = gamesPlayed_file.read() # GamesPlayed Value
+        self.currentstreak = currentStreak_file.read() # CurrentStreak Value
+        self.higheststreak = highestStreak_file.read() # HighestStreak Value
+
+        gamesPlayed_file.close()
+        currentStreak_file.close()
+        highestStreak_file.close()
 
         # Difficulty Setup
         self.selected_difficulty_tk = tk.StringVar() # Difficulty Variable (Tk)
