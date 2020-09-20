@@ -34,6 +34,7 @@ A Simple GUI Hangman Game
 - ***NOTE:** DO NOT INCLUDE ANY SEPERATORS FOR THE WORDS, EACH WORD IS ON A NEW LINE*
 - ***WARNING:** SPACES ARE NOT SUPPORTED WITHIN A WORD*
 
+## Other Info
 #### There are 4 difficulties:
   - Easy (Includes 250 Common Words)
   - Normal (Includes 1000 Common Words)
