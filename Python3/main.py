@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import font
 from random import choice
 import time
-import pandas as pd
+from pandas import read_csv
 
 import config
 
@@ -247,7 +247,7 @@ class Game(Application): # Main Game
             self.finish(1) # Wrap Up (Win)
 
     def finish(self, state): # Win/Loss Result/Outcome
-        df = pd.read_csv("./Other/data.csv") # CSV File
+        df = read_csv("./Other/data.csv") # CSV File
 
         previous_gamesplayed = int(df["GamesPlayed"][0]) # Previous GamesPlayed
         previous_currentstreak = int(df["CurrentStreak"][0]) # Previous CurrentStreak
@@ -305,7 +305,7 @@ class MainMenu(Application): # Main Menu
         super().__init__() # Superclass (Application)
 
         # Data Setup
-        df = pd.read_csv("./Other/data.csv") # CSV File
+        df = read_csv("./Other/data.csv") # CSV File
 
         self.gamesplayed = df["GamesPlayed"][0] # GamesPlayed
         self.currentstreak = df["CurrentStreak"][0] # CurrentStreak
