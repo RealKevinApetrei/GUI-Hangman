@@ -19,9 +19,9 @@ A Simple GUI Hangman Game
   - A compatible system
 
 ## Supported Executables
-- Linux (Up to date)
-- Windows (Up to date)
-- MacOS (Not Available)
+- Linux (N/A)
+- Windows (N/A)
+- MacOS (N/A)
 
 ## How to add Custom Words
 1. Open `./Other/custom.txt`
@@ -34,9 +34,6 @@ A Simple GUI Hangman Game
   word5
   ```
 - ***NOTE:** DO NOT INCLUDE ANY SEPERATORS FOR THE WORDS, EACH WORD IS ON A NEW LINE*
-
-## Notes
-If you would like a MacOS executable I publish one when requested since I do not have a MacOS Machine Available.
 
 #### There are 4 difficulties:
   - Easy (Includes 250 Common Words)
