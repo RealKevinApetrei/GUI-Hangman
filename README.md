@@ -32,6 +32,7 @@ A Simple GUI Hangman Game
   word5
   ```
 - ***NOTE:** DO NOT INCLUDE ANY SEPERATORS FOR THE WORDS, EACH WORD IS ON A NEW LINE*
+- ***WARNING:** SPACES ARE NOT SUPPORTED WITHIN A WORD*
 
 #### There are 4 difficulties:
   - Easy (Includes 250 Common Words)
