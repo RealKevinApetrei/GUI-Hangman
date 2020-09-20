@@ -12,16 +12,14 @@ A Simple GUI Hangman Game
   - Python3.x
   - tkinter
   - random
-  - time
-  - pandas
 
 #### If you are running with Executable:
   - A compatible system
 
 ## Supported Executables
-- Linux (N/A)
-- Windows (N/A)
-- MacOS (N/A)
+- Linux (Up to Date: ✔️) (Avaliable: ✔️)
+- Windows (Up to Date: ❌) (Avaliable: ❌)
+- MacOS (Up to Date: ❌) (Available: ❌)
 
 ## How to add Custom Words
 1. Open `./Other/custom.txt`
