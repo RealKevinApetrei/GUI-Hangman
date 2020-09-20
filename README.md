@@ -18,7 +18,7 @@ A Simple GUI Hangman Game
 
 ## Supported Executables
 - Linux (Up to Date: ✔️) (Avaliable: ✔️)
-- Windows (Up to Date: ❌) (Avaliable: ❌)
+- Windows (Up to Date: ✔️)) (Avaliable: ✔️))
 - MacOS (Up to Date: ❌) (Available: ❌)
 
 ## How to add Custom Words
