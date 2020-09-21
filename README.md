@@ -9,7 +9,7 @@ A Simple GUI Hangman Game
 
 ## Requirements and Modules
 #### If you are running with Python3:
-  - Python3.x
+  - Python3.6+
   - tkinter
   - random
 
