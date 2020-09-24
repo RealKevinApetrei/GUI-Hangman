@@ -1,6 +1,6 @@
 # DEVELOPER CONFIG (EDIT NOT RECOMMENDED)
 
-BUILD_VERSION = "v1.12.84-public"
+BUILD_VERSION = "v1.13.23-public"
 AUTHOR = "Kevin Apetrei"
 
 PROGRAM_NAME = "GUI Hangman"
