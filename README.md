@@ -18,7 +18,7 @@ A Simple GUI Hangman Game
 
 ## Supported Executables
 - Linux (Up to Date: ✔️) (Avaliable: ✔️)
-- Windows (Up to Date: ✔️)) (Avaliable: ✔️)) (**WARNING: *If windows marks the file as a virus, please feel free to use the Python3 version***)
+- Windows (Up to Date: ❌)) (Avaliable: ❌)) (**WARNING: *If windows marks the file as a virus, please feel free to use the Python3 version***)
 - MacOS (Up to Date: ❌) (Available: ❌)
 
 ## How to add Custom Words
